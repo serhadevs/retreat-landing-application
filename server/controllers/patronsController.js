@@ -2,13 +2,15 @@ const db = require("../databases/db");
 const sendEmail = require("../services/sendEmail");
 
 const register = async (req, res) => {
-  const getMailOptions = ({
+  const getMailOptions = async ({
     recipient,
     first_name,
     last_name,
     day_1,
     day_2,
     day_3,
+    day_1_pass,
+    day_2_pass
   }) => {
     mailOptions = {
       from: "kian.oconnor.serha@gmail.com",
@@ -22,11 +24,33 @@ const register = async (req, res) => {
       <br/>
       You have been registered for the 2024/2025 Strategic Management Retreat by the South East Regional Health Authority (SERHA) at the Royalton Blue Waters Hotel for the following days:
       <ul>
-        ${day_1 == "1" ? `<li>March 20, 2024</li>` : ""}
-        ${day_2 == "2" ? `<li>March 21, 2024</li>` : ""}
-        ${day_3 == "3" ? `<li>March 21, 2024</li>` : ""}
-      </ul>  
+      ${
+        day_1 == "1"
+          ? `<li>March 20, 2024` +
+            (day_1_pass == "1"
+              ? " - Day Pass"
+              : day_1_pass == "2"
+              ? " - Overnight"
+              : "") +
+            `</li>`
+          : ""
+      }
+      ${
+        day_2 == "2"
+          ? `<li>March 21, 2024` +
+            (day_2_pass == "1"
+              ? " - Day Pass"
+              : day_2_pass == "2"
+              ? " - Overnight"
+              : "") +
+            `</li>`
+          : ""
+      }
+      ${day_3 == "3" ? `<li>March 22, 2024</li>` : ""}
+      </ul> 
+      <br/> 
       We look forward to seeing you!
+      <br/>
       </div>`,
     };
     return mailOptions;
@@ -40,7 +64,7 @@ const register = async (req, res) => {
       //check if already registered
       if (query_zero[0].length == 0) {
         sql =
-          "SELECT a.`first_name`, a.`last_name`, a.`email_address`, a.`phone_number`, a.`id`, b.`day_1`,b.`day_2`,b.`day_3` FROM invitees as a, invitees_days as b WHERE a.id = b.invitees_id AND a.id=?";
+          "SELECT a.`first_name`, a.`last_name`, a.`email_address`, a.`phone_number`, a.`id`, b.`day_1`,b.`day_2`,b.`day_3`, c.`day_1_pass`, c.`day_2_pass` FROM invitees as a, invitees_days as b, invitees_passes as c WHERE a.id = b.invitees_id AND a.id = c.invitees_id AND a.id=?";
         const query_one = await db.execute(sql, [id]);
         if (query_one[0].length > 0) {
           sql2 =
@@ -52,13 +76,15 @@ const register = async (req, res) => {
             query_three = await db.execute(sql3, [new Date(), id]);
             if (query_three[0].affectedRows > 0) {
               await sendEmail({
-                mailOptions: getMailOptions({
+                mailOptions: await getMailOptions({
                   recipient: query_one[0][0].email_address,
                   first_name: query_one[0][0].first_name,
                   last_name: query_one[0][0].last_name,
                   day_1: query_one[0][0].day_1,
                   day_2: query_one[0][0].day_2,
                   day_3: query_one[0][0].day_3,
+                  day_1_pass: query_one[0][0].day_1_pass,
+                  day_2_pass: query_one[0][0].day_2_pass,
                 }),
               });
               return res.json({

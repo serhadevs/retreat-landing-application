@@ -3,17 +3,17 @@ const jwt = require("jsonwebtoken");
 const sendEmail = require("../services/sendEmail");
 require("dotenv").config();
 const confirmPatron = async (req, res, next) => {
-  const getMailOptions = ({ recipient, verification_code }) => {
-    return (mailOptions = {
-      from: "kian.oconnor.serha@gmail.com",
+  const getMailOptions = async ({ recipient, verification_code }) => {
+    return await (mailOptions = {
+      from: "serha.board.retreat@gmail.com",
       to: recipient,
       subject: "SERHA Board Retreat Verification Code",
-      html: `<h2 style="text-align:center">Verification Code</h2><hr/><div>Good day,<br/><br/> Please use the following code to verify your email <b>${verification_code}</b>. Please note that this verification code will expire after two minutes.</div>`,
+      html: `<h2 style="text-align:center">Verification Code</h2><hr/><div>Good day,<br/><br/> Please use the following code to verify your email <b>${verification_code}</b> in the register section of registration form. Please note that this verification code will expire after twenty-four(24) hours. After expiration you will have to request another code.</div>`,
       dsn: {
         id: "123",
         return: "headers",
         notify: "success",
-        recipient: "kian.oconnor.serha@gmail.com",
+        recipient: "serha.board.retreat@gmail.com",
       },
     });
   };
@@ -45,7 +45,7 @@ const confirmPatron = async (req, res, next) => {
         if (query_two[0].affectedRows > 0) {
             //Need to handle email
           await sendEmail({
-            mailOptions: getMailOptions({
+            mailOptions: await getMailOptions({
               recipient: query_one[0][0].email_address,
               verification_code: verification_code,
             }),
