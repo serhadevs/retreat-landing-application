@@ -24,7 +24,7 @@ const RegistrationRegisterForm = ({handleStateMessage, handleStateAlertColor, in
       };
   
       await axios
-        .post("https://retreat-landin-deploy.onrender.com/patrons/register", values)
+        .post("http://localhost:8082/patrons/register", values)
         .then((res) => {
           console.log(res);
           if (res.data.Status == "Success") {
