@@ -925,7 +925,7 @@ button{
   width:95%;
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1540px) {
   .welcome-container{
     width:80%;
   }
