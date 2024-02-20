@@ -24,7 +24,7 @@ const RegistrationRegisterForm = ({handleStateMessage, handleStateAlertColor, in
       };
   
       await axios
-        .post("https://retreat-application.onrender.compatrons/register", values)
+        .post("https://retreat-application.onrender.com/patrons/register", values)
         .then((res) => {
           console.log(res);
           if (res.data.Status == "Success") {
