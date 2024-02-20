@@ -27,8 +27,9 @@ const RegistrationVerifyForm = ({
 
   const onSubmit = async (data) => {
     await axios
-      .post("http://localhost:8082/confirmation/" + data.invitees_ref)
+      .post("https://retreat-landin-deploy.onrender.com/confirmation/" + data.invitees_ref)
       .then((res) => {
+        console.log(res);
         if (res.data.Status == "Success") {
           handleStateRef(data.invitees_ref);
           handleToggle(2);

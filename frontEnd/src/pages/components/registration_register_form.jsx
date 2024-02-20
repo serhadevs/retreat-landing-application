@@ -18,15 +18,15 @@ const RegistrationRegisterForm = ({handleStateMessage, handleStateAlertColor, in
   });
 
   const onSubmit = async (data) => {
-    console.log(data);
     const values = {
         invitees_ref: data.invitees_ref,
         verification_code: data.verification_code
       };
   
       await axios
-        .post("http://localhost:8082/patrons/register", values)
+        .post("https://retreat-landin-deploy.onrender.com/patrons/register", values)
         .then((res) => {
+          console.log(res);
           if (res.data.Status == "Success") {
             handleStateMessage("You have been registered");
             handleStateAlertColor("rgba(11, 218, 81, .5)");
