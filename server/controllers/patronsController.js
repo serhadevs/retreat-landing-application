@@ -13,7 +13,7 @@ const register = async (req, res) => {
     day_2_pass
   }) => {
     mailOptions = {
-      from: "kian.oconnor.serha@gmail.com",
+      from: "serha.board.retreat@gmail.com",
       to: recipient,
       subject: "Registration for SERHA's Board Retreat",
       html: `<h2 style="text-align:center">Registration for Serha's Board Retreat</h2><hr/>
