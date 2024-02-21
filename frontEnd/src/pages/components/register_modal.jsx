@@ -112,8 +112,8 @@ const RegisterModal = ({ handleModal }) => {
           )}
 
           <div className="modal-content">
-            {view1 ? <RegistrationVerifyForm handleToggle={handleToggle} handleStateRef={handleStateRef} handleStateMessage={handleStateMessage} handleStateAlertColor={handleStateAlertColor}/> : ""}
-            {view2 ? <RegistrationRegisterForm inv_ref={invitees_ref} handleStateAlertColor={handleStateAlertColor} handleStateMessage={handleStateMessage}/> : ""}
+            {view1 ? <RegistrationVerifyForm handleToggle={handleToggle} handleStateRef={handleStateRef} handleStateMessage={handleStateMessage} handleStateAlertColor={handleStateAlertColor} handleModal={handleModal}/> : ""}
+            {view2 ? <RegistrationRegisterForm inv_ref={invitees_ref} handleStateAlertColor={handleStateAlertColor} handleStateMessage={handleStateMessage} handleModal={handleModal}/> : ""}
           </div>
         </div>
       </div>

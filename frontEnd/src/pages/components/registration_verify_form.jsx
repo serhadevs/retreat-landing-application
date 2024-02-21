@@ -13,6 +13,8 @@ const RegistrationVerifyForm = ({
   handleStateMessage,
   // eslint-disable-next-line react/prop-types
   handleStateAlertColor,
+  // eslint-disable-next-line react/prop-types
+  handleModal
 }) => {
   const {
     register,
@@ -27,11 +29,11 @@ const RegistrationVerifyForm = ({
 
   const onSubmit = async (data) => {
     await axios
-      .post("https://retreat-application.onrender.com/confirmation/" + data.invitees_ref)
+      .post("https://retreat-application.onrender.com/confirmation/" + data.invitees_ref.toLowerCase())
       .then((res) => {
         console.log(res);
         if (res.data.Status == "Success") {
-          handleStateRef(data.invitees_ref);
+          handleStateRef(data.invitees_ref.toLowerCase());
           handleToggle(2);
         }
         if (res.data.Error != "") {
@@ -69,7 +71,7 @@ const RegistrationVerifyForm = ({
           <button className="btn-success" type="submit">
             Submit
           </button>
-          <button className="btn-danger">Cancel</button>
+          <a className="btn-danger" onClick={handleModal}>Cancel</a>
         </div>
       </div>
     </form>

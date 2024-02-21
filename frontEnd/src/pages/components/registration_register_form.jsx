@@ -4,7 +4,7 @@ import {yupResolver} from "@hookform/resolvers/yup"
 import RegisterSchema from "../validation_schemas/register_schema";
 
 // eslint-disable-next-line react/prop-types
-const RegistrationRegisterForm = ({handleStateMessage, handleStateAlertColor, inv_ref}) => {
+const RegistrationRegisterForm = ({handleStateMessage, handleStateAlertColor, inv_ref, handleModal}) => {
   const {
     register,
     handleSubmit,
@@ -19,7 +19,7 @@ const RegistrationRegisterForm = ({handleStateMessage, handleStateAlertColor, in
 
   const onSubmit = async (data) => {
     const values = {
-        invitees_ref: data.invitees_ref,
+        invitees_ref: data.invitees_ref.toLowerCase(),
         verification_code: data.verification_code
       };
   
@@ -81,7 +81,7 @@ const RegistrationRegisterForm = ({handleStateMessage, handleStateAlertColor, in
         </p>
         <div className="modal-buttons">
           <button className="btn-success">Submit</button>
-          <button className="btn-danger">Cancel</button>
+          <a className="btn-danger" onClick={handleModal}>Cancel</a>
         </div>
       </div>
     </form>
