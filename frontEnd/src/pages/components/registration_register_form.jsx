@@ -1,10 +1,15 @@
 import { useForm } from "react-hook-form";
-import axios from 'axios'
-import {yupResolver} from "@hookform/resolvers/yup"
+import axios from "axios";
+import { yupResolver } from "@hookform/resolvers/yup";
 import RegisterSchema from "../validation_schemas/register_schema";
 
 // eslint-disable-next-line react/prop-types
-const RegistrationRegisterForm = ({handleStateMessage, handleStateAlertColor, inv_ref, handleModal}) => {
+const RegistrationRegisterForm = ({
+  handleStateMessage,
+  handleStateAlertColor,
+  inv_ref,
+  handleModal,
+}) => {
   const {
     register,
     handleSubmit,
@@ -12,30 +17,30 @@ const RegistrationRegisterForm = ({handleStateMessage, handleStateAlertColor, in
   } = useForm({
     defaultValues: {
       invitees_ref: inv_ref ? inv_ref : "",
-      verification_code: ""
+      verification_code: "",
     },
-    resolver : yupResolver(RegisterSchema)
+    resolver: yupResolver(RegisterSchema),
   });
 
   const onSubmit = async (data) => {
     const values = {
-        invitees_ref: data.invitees_ref.toLowerCase(),
-        verification_code: data.verification_code
-      };
-  
-      await axios
-        .post("https://retreat-application.onrender.com/patrons/register", values)
-        .then((res) => {
-          console.log(res);
-          if (res.data.Status == "Success") {
-            handleStateMessage("You have been registered");
-            handleStateAlertColor("rgba(11, 218, 81, .5)");
-          } else if (res.data.Error != "") {
-            handleStateMessage(res.data.Error);
-            handleStateAlertColor("rgba(255, 0, 0, 0.4)");
-          }
-        })
-        .catch((err) => console.log(err));
+      invitees_ref: data.invitees_ref.toLowerCase(),
+      verification_code: data.verification_code,
+    };
+
+    await axios
+      .post("https://retreat-application.onrender.com/patrons/register", values)
+      .then((res) => {
+        console.log(res);
+        if (res.data.Status == "Success") {
+          handleStateMessage("You have been registered");
+          handleStateAlertColor("rgba(11, 218, 81, .5)");
+        } else if (res.data.Error != "") {
+          handleStateMessage(res.data.Error);
+          handleStateAlertColor("rgba(255, 0, 0, 0.4)");
+        }
+      })
+      .catch((err) => console.log(err));
   };
 
   return (
@@ -81,7 +86,11 @@ const RegistrationRegisterForm = ({handleStateMessage, handleStateAlertColor, in
         </p>
         <div className="modal-buttons">
           <button className="btn-success">Submit</button>
-          <a className="btn-danger" onClick={handleModal}>Cancel</a>
+          <button disabled className="btn-danger">
+            <a onClick={handleModal}>
+              Cancel
+            </a>
+          </button>
         </div>
       </div>
     </form>
