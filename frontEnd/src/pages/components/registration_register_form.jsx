@@ -90,13 +90,7 @@ const RegistrationRegisterForm = ({
         </p>
         <div className="modal-buttons">
           <button className="btn-success">Submit</button>
-          <button
-            className="btn-danger"
-            type="button"
-            onClick={() => {
-              handleModal;
-            }}
-          >
+          <button className="btn-danger" type="button" onClick={handleModal}>
             Cancel
           </button>
         </div>
