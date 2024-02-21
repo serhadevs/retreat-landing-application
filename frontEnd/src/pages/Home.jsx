@@ -174,10 +174,10 @@ const Home = () => {
               <div className="gs-left">
                 <a href="https://jm.linkedin.com/in/hugh-wong-90402674">
                   <img src={guest_speaker_image} alt="" className="gs-image" />
+                  <div className="gs-left-name">
+                    Dr Hugh M. Wong BSc; MBBs; MSc; DM
+                  </div>
                 </a>
-                <div className="gs-left-name">
-                  Dr Hugh M. Wong BSc; MBBs; MSc; DM
-                </div>
               </div>
               <div className="gs-right">
                 Dr. Hugh Wong is the Head of Department of the Accident and

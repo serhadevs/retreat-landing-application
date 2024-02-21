@@ -53,7 +53,7 @@ const Agenda = () => {
             <span className="agenda-time"> 9: 00 a.m. - 10:00 p.m </span>
             <span className="agenda-event"> Registration Secretariat </span>
             <hr className="agenda-expandable-content-hr" />
-            <span className="agenda-time"> 10:00 a.m. - 10:00 a.m. </span>
+            <span className="agenda-time"> 10:00 a.m. - 10:10 a.m. </span>
             <span className="agenda-event"> Prayer </span>
             Dr. Samantha Nicholson Spence <br />
             Senior Medical Officer, Kingston Public Hospital
@@ -95,8 +95,7 @@ const Agenda = () => {
             Ms. Alicia King
             <hr className="agenda-expandable-content-hr" />
             <span className="agenda-time"> 12:30 pm – 1:30 pm </span>
-            <span className="agenda-event"> </span>
-            LUNCH
+            <span className="agenda-event"> LUNCH</span>
             <hr className="agenda-expandable-content-hr" />
             <span className="agenda-time"> 1:30 pm - 2:00 pm </span>
             <span className="agenda-event">
@@ -135,9 +134,7 @@ const Agenda = () => {
             <hr className="agenda-expandable-content-hr" /> */}
             <span className="agenda-time"> 3:30 pm - 4:30 pm </span>
             <span className="agenda-event">
-              Technical Presentation: Identifying and Addressing Gaps in
-              Healthcare Delivery to Ensure Patients Receive the Right Care at
-              the Right Time across the Region
+              Kingston & St. Andrew Strategic Focus 2024/2025
             </span>
             Mr. Mark Martin, Parish Manager, Kingston and St. Andrew (KSA)
             <br />
@@ -173,9 +170,8 @@ const Agenda = () => {
             <span className="agenda-time"> 7:15 pm -9:00 pm </span>
             <span className="agenda-event"> Dinner with the Chairman </span>
             <hr className="agenda-expandable-content-hr" />
-            9:00pm
-            <br />
-            End of Day One
+            <span className="agenda-time">9:00pm</span>
+            <span className="agenda-event"> End of Day One </span>
           </div>
         </div>
       ) : (
@@ -221,7 +217,9 @@ const Agenda = () => {
               Presentation of Guest Speaker: Emergency Insight - The Chaotic
               Symphony of The Emergency Department Revealed
             </div>
-            Dr. Hugh Wong Head of Department, Accident & Emergency Department,
+            Dr. Hugh Wong <br />
+            Head of Department, Accident & Emergency Department
+            <br />
             KPH
             <hr className="agenda-expandable-content-hr" />
             <div className="agenda-time">10:55 am – 11:10 am</div>
@@ -256,7 +254,7 @@ const Agenda = () => {
             </div>
             Mr. Abdon Campbell, Parish Manager, St. Catherine
             <br />
-            Dr. Francia ProsperChen, Senior Medical Officer of Health, St.
+            Dr. Francia Prosper Chen, Senior Medical Officer of Health, St.
             Catherine
             <br /> Ms. Jacqueline Ellis, Chief Executive Officer, Spanish Town
             Hospital <br />
@@ -278,6 +276,10 @@ const Agenda = () => {
             Ms. Melecia Linton, Chief Executive Officer, Princess Margaret
             Hospital
             <hr className="agenda-expandable-content-hr" />
+            <div className="agenda-time">3:40 pm- 3:55 pm</div>
+            <div className="agenda-event">Discussion and Comments</div>
+            Ms. Alicia King
+            <hr className="agenda-expandable-content-hr" />
             <div className="agenda-time">3:55 pm-4:10 pm</div>
             <div className="agenda-event">COFFEE BREAK</div>
             <hr className="agenda-expandable-content-hr" />
@@ -293,8 +295,8 @@ const Agenda = () => {
             Ms. Alicia King
             <hr className="agenda-expandable-content-hr" />
             <div className="agenda-time">4:45 pm-4:55 pm</div>
-            <div className="agenda-event">Way FOrward and Closing Remarks</div>
-            MediaRecorder. Wentworth Charles
+            <div className="agenda-event">Way Forward and Closing Remarks</div>
+            Wentworth Charles
             <br />
             Board Chairman
             <hr className="agenda-expandable-content-hr" />
