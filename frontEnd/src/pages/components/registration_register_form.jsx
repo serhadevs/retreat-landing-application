@@ -5,9 +5,13 @@ import RegisterSchema from "../validation_schemas/register_schema";
 
 // eslint-disable-next-line react/prop-types
 const RegistrationRegisterForm = ({
+  // eslint-disable-next-line react/prop-types
   handleStateMessage,
+  // eslint-disable-next-line react/prop-types
   handleStateAlertColor,
+  // eslint-disable-next-line react/prop-types
   inv_ref,
+  // eslint-disable-next-line react/prop-types
   handleModal,
 }) => {
   const {
@@ -86,10 +90,14 @@ const RegistrationRegisterForm = ({
         </p>
         <div className="modal-buttons">
           <button className="btn-success">Submit</button>
-          <button disabled className="btn-danger">
-            <a onClick={handleModal}>
-              Cancel
-            </a>
+          <button
+            className="btn-danger"
+            type="button"
+            onClick={() => {
+              handleModal;
+            }}
+          >
+            Cancel
           </button>
         </div>
       </div>
