@@ -86,8 +86,8 @@ const Home = () => {
               <div className="vert-line"></div>
               <div className="welcome-text">
                 <div className="event-name">
-                  SERHA&apos;s 3rd Annual Board of Directors&apos; Strategic Management
-                  Retreat
+                  SERHA&apos;s 3rd Annual Board of Directors&apos; Strategic
+                  Management Retreat
                 </div>
                 <div className="theme">
                   Right Care at the Right Time: Expanding Access to Quality
@@ -102,7 +102,9 @@ const Home = () => {
                 <p>Royalton Blue Waters Hotel in Trelawny</p>
               </div>
               <div className="right">
-                  <button className="agenda-button" onClick={handleModal}>Register Here</button>
+                <button className="agenda-button" onClick={handleModal}>
+                  Register Here
+                </button>
               </div>
             </div>
           </div>
@@ -178,27 +180,36 @@ const Home = () => {
                 </div>
               </div>
               <div className="gs-right">
-                Dedicated and accomplished Physician Administrator with a proven
-                track record of seamlessly integrating medical expertise with
-                effective administrative leadership. Known for driving
-                operational excellence, optimizing healthcare delivery, and
-                fostering collaborative environments. Skilled at overseeing
-                medical staff, implementing strategic initiatives, and ensuring
-                regulatory compliance. <br />
+                Dr. Hugh Wong is the Head of Department of the Accident and
+                Emergency Department at the Kingston Public Hospital (KPH) and
+                was the Acting Regional Quality Assurance and Infection Control
+                Co-Ordinator, KPH. Dr. Wong is a highly qualified consultant
+                physician with 27 years of experience in the medical field. He
+                is currently an Associate lecturer at the University of the West
+                Indies in the Department of Surgery, Radiology, Anaesthesia and
+                Intensive Care. He is also an adjunct lecturer for the
+                postgraduate diploma in Emergency Medicine. <br />
                 <br />
-                Key Skills:
-                <div style={{ marginLeft: "20px" }}>
-                  <ul>
-                    <li>Healthcare Administration</li>
-                    <li>Medical Staff Leadership</li>
-                    <li>Strategic Planning</li>
-                    <li>Quality Improvement</li>
-                    <li>Regulatory Compliance</li>
-                    <li>Patient-Centered Care</li>
-                    <li>Team Collaboration</li>
-                    <li>Medical Education</li>
-                  </ul>
-                </div>
+                His expertise has been engaged at the national level where he
+                served as the Director of Emergency Medical Services with
+                responsibility for Emergency Disaster and Special Services
+                Branch, Ministry of Health and wellness and the Chairman of the
+                National Resuscitation Council of Jamaica. His accomplishments
+                have led him to sit on several boards. He is currently a board
+                member and the Director of Emergency Cardiac Care at the Heart
+                Foundation of Jamaica.
+                <br />
+                Dr. Wong is a dedicated and accomplished Physician Administrator
+                with a proven track record of seamlessly integrating medical
+                expertise with effective administrative leadership. Known for
+                driving operational excellence, optimizing healthcare delivery,
+                and fostering collaborative environments, he has used his skills
+                in overseeing medical staff, implementing strategic initiatives,
+                and ensuring regulatory compliance.
+                <br />
+                Dr. Wong enjoys cycling, travelling, reading and doing DIY
+                projects at home. His life mantra is to make a positive impact
+                on the lives of the persons that he comes in contact with.
               </div>
             </div>
           </div>
