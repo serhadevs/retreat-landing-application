@@ -260,6 +260,8 @@ iframe {
   width: 80%;
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
+  padding-bottom:0;
+  margin-bottom:0;
 }
 
 .gs-right {
@@ -280,6 +282,8 @@ iframe {
   border-bottom-right-radius: 10px;
   /* margin-left:auto;
   margin-right:auto; */
+  margin-top:0;
+  padding-top:0;
 }
 
 .sponsor-images {
