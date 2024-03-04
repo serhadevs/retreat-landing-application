@@ -2,6 +2,7 @@ import { useForm } from "react-hook-form";
 import axios from "axios";
 import { yupResolver } from "@hookform/resolvers/yup";
 import RegisterSchema from "../validation_schemas/register_schema";
+import {useState} from 'react'
 
 // eslint-disable-next-line react/prop-types
 const RegistrationRegisterForm = ({
@@ -26,7 +27,12 @@ const RegistrationRegisterForm = ({
     resolver: yupResolver(RegisterSchema),
   });
 
+  const [isButtonDisabled, setButtonDisabled] = useState(false);
+
   const onSubmit = async (data) => {
+    setButtonDisabled(true);
+    handleStateMessage("Loading...");
+    handleStateAlertColor("rgba(11, 218, 81, .5)");
     const values = {
       invitees_ref: data.invitees_ref.toLowerCase(),
       verification_code: data.verification_code,
@@ -59,6 +65,7 @@ const RegistrationRegisterForm = ({
           className="modal-control"
           placeholder="Enter Email"
           {...register("invitees_ref")}
+          onChange={()=>{setButtonDisabled(false)}}
         />
         <p
           style={{
@@ -76,6 +83,7 @@ const RegistrationRegisterForm = ({
           className="modal-control"
           placeholder="Enter Verification Code"
           {...register("verification_code")}
+          onChange={()=>{setButtonDisabled(false)}}
         />
         <p
           style={{
@@ -89,7 +97,7 @@ const RegistrationRegisterForm = ({
           {errors.verification_code?.message}
         </p>
         <div className="modal-buttons">
-          <button className="btn-success">Submit</button>
+          <button className={isButtonDisabled ? `btn-disabled`:`btn-success`} type="submit" disabled={isButtonDisabled}>Submit</button>
           <button className="btn-danger" type="button" onClick={handleModal}>
             Cancel
           </button>

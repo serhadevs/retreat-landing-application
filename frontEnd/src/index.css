@@ -807,6 +807,11 @@ button{
   color:#fff;
 }
 
+.btn-disabled{
+  background:#B8B8B8;
+  color:#fff;
+}
+
 .alert{
   display:flex;
   background: rgba(255, 0, 0, 0.4);
