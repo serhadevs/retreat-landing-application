@@ -2,6 +2,7 @@ import { useForm } from "react-hook-form";
 import axios from "axios";
 import { yupResolver } from "@hookform/resolvers/yup";
 import VerificationSchema from "../validation_schemas/verification_schema";
+import { useState } from "react";
 
 // eslint-disable-next-line react/prop-types
 const RegistrationVerifyForm = ({
@@ -27,7 +28,12 @@ const RegistrationVerifyForm = ({
     resolver: yupResolver(VerificationSchema),
   });
 
+  const [btn, setBtn] = useState(false);
+
   const onSubmit = async (data) => {
+    setBtn(true);
+    handleStateMessage("Loading..");
+    handleStateAlertColor("rgba(11, 218, 81, .5)");
     await axios
       .post(
         "https://retreat-application.onrender.com/confirmation/" +
@@ -58,6 +64,7 @@ const RegistrationVerifyForm = ({
           className="modal-control"
           placeholder="Enter Email"
           {...register("invitees_ref")}
+          onChange={setBtn(false)}
         />
         <p
           style={{
@@ -71,7 +78,7 @@ const RegistrationVerifyForm = ({
           {errors.invitees_ref?.message}
         </p>
         <div className="modal-buttons">
-          <button className="btn-success" type="submit">
+          <button className="btn-success" type="submit" disabled={btn}>
             Submit
           </button>
           <button className="btn-danger" type="button" onClick={handleModal}>
