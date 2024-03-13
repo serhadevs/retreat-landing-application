@@ -1,19 +1,19 @@
 import registerImage from "../assets/images/vectors/registerImage.jpg";
-import { useState } from "react";
-import RegistrationVerifyForm from "./registration_verify_form";
-import RegistrationRegisterForm from "./registration_register_form";
+// import { useState } from "react";
+// import RegistrationVerifyForm from "./registration_verify_form";
+// import RegistrationRegisterForm from "./registration_register_form";
 
 // eslint-disable-next-line react/prop-types
 const RegisterModal = ({ handleModal }) => {
-  const [view1, setView1] = useState(true);
-  const [view2, setView2] = useState(false);
-  const [invitees_ref, setInviteesRef] = useState("");
-  const [message, setMessage] = useState("");
-  const [alertColor, setAlertColor] = useState("");
+  // const [view1, setView1] = useState(true);
+  // const [view2, setView2] = useState(false);
+  // const [invitees_ref, setInviteesRef] = useState("");
+  // const [message, setMessage] = useState("");
+  // const [alertColor, setAlertColor] = useState("");
 
-  const alertStyle = {
-    background: alertColor,
-  };
+  // const alertStyle = {
+  //   background: alertColor,
+  // };
 
   const containerStyle = {
     height: "100vh",
@@ -25,31 +25,31 @@ const RegisterModal = ({ handleModal }) => {
   };
 
   //handle states in children
-  const handleStateRef = (inv_ref) =>{
-    setInviteesRef(inv_ref);
-  }
+  // const handleStateRef = (inv_ref) =>{
+  //   setInviteesRef(inv_ref);
+  // }
 
-  const handleStateMessage = (message) =>{
-    setMessage(message);
-  }
+  // const handleStateMessage = (message) =>{
+  //   setMessage(message);
+  // }
 
-  const handleStateAlertColor =(alertColor)=>{
-    setAlertColor(alertColor);
-  }
-  const handleToggle = (index) => {
-    if (index == 1) {
-      setView1(true);
-      setView2(false);
-    }
-    if (index == 2) {
-      setView2(true);
-      setView1(false);
-    }
-  };
+  // const handleStateAlertColor =(alertColor)=>{
+  //   setAlertColor(alertColor);
+  // }
+  // const handleToggle = (index) => {
+  //   if (index == 1) {
+  //     setView1(true);
+  //     setView2(false);
+  //   }
+  //   if (index == 2) {
+  //     setView2(true);
+  //     setView1(false);
+  //   }
+  // };
 
-  const handleAlert = () => {
-    setMessage("");
-  };
+  // const handleAlert = () => {
+  //   setMessage("");
+  // };
 
   return (
     <div className="modal-container" style={containerStyle}>
@@ -59,7 +59,7 @@ const RegisterModal = ({ handleModal }) => {
         </div>
         <div className="modal-right">
           <div className="toggle-x">
-            <div className="toggle">
+            {/* <div className="toggle">
               <div
                 className={`toggle-left ${view1 ? "toggle-active" : ""}`}
                 onClick={() => {
@@ -76,7 +76,7 @@ const RegisterModal = ({ handleModal }) => {
               >
                 Register
               </div>
-            </div>
+            </div> */}
             <div
               className="modal-active"
               onClick={() => {
@@ -96,7 +96,7 @@ const RegisterModal = ({ handleModal }) => {
             </div>
           </div>
 
-          {message ? (
+          {/* {message ? (
             <div className="alert" style={alertStyle}>
               <div className="message">
                 <div className="message-text">{message}</div>
@@ -109,11 +109,14 @@ const RegisterModal = ({ handleModal }) => {
             </div>
           ) : (
             ""
-          )}
+          )} */}
 
           <div className="modal-content">
-            {view1 ? <RegistrationVerifyForm handleToggle={handleToggle} handleStateRef={handleStateRef} handleStateMessage={handleStateMessage} handleStateAlertColor={handleStateAlertColor} handleModal={handleModal}/> : ""}
-            {view2 ? <RegistrationRegisterForm inv_ref={invitees_ref} handleStateAlertColor={handleStateAlertColor} handleStateMessage={handleStateMessage} handleModal={handleModal}/> : ""}
+            <h2 style={{ color:"red", textAlign:"center" }}>
+              The registration period <br/>for this event has<br/> closed.
+            </h2>
+            {/* {view1 ? <RegistrationVerifyForm handleToggle={handleToggle} handleStateRef={handleStateRef} handleStateMessage={handleStateMessage} handleStateAlertColor={handleStateAlertColor} handleModal={handleModal}/> : ""}
+            {view2 ? <RegistrationRegisterForm inv_ref={invitees_ref} handleStateAlertColor={handleStateAlertColor} handleStateMessage={handleStateMessage} handleModal={handleModal}/> : ""} */}
           </div>
         </div>
       </div>

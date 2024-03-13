@@ -655,7 +655,9 @@ iframe {
 }
 
 .toggle-x{
-  display:flex;
+  /* display:flex; */
+  text-align:right;
+  width:100%;
 }
 
 .toggle{
@@ -740,9 +742,9 @@ iframe {
 }
 
 .modal-active{
-  width:5%;
+  width:95%;
   text-align:right;
-  margin:auto;
+  /* margin:auto; */
 }
 
 .modal-active svg{
