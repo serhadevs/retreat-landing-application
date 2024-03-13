@@ -16,7 +16,7 @@ app.use("/patrons", patronsRoutes);
 
 app.use("/confirmation/:invitees_ref", confirmPatron);
 
-// if (process.env.NODE_ENV === 'PRODUCTION') {
+if (process.env.NODE_ENV === 'PRODUCTION') {
   app.use(express.static(path.join(__dirname, '../frontEnd/dist')));
 
   app.get('*', (req, res) =>
@@ -24,9 +24,9 @@ app.use("/confirmation/:invitees_ref", confirmPatron);
       path.resolve(__dirname, '../', 'frontEnd', 'dist', 'index.html')
     )
   );
-// } else {
-//   app.get('/', (req, res) => res.send('Please set to production'));
-// }
+} else {
+  app.get('/', (req, res) => res.send('Please set to production'));
+}
 
 app.listen(8082, () => {
   console.log("Listening");
