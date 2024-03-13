@@ -183,7 +183,7 @@ const Home = () => {
                 Dr. Hugh Wong is the Head of Department of the Accident and
                 Emergency Department at the Kingston Public Hospital (KPH) and
                 was the Acting Regional Quality Assurance and Infection Control
-                Co-Ordinator, KPH. Dr. Wong is a highly qualified consultant
+                Co-Ordinator. Dr. Wong is a highly qualified consultant
                 physician with 27 years of experience in the medical field. He
                 is currently an Associate lecturer at the University of the West
                 Indies in the Department of Surgery, Radiology, Anaesthesia and
