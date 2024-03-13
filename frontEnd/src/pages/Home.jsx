@@ -193,22 +193,23 @@ const Home = () => {
                 His expertise has been engaged at the national level where he
                 served as the Director of Emergency Medical Services with
                 responsibility for Emergency Disaster and Special Services
-                Branch, Ministry of Health and wellness and the Chairman of the
+                Branch, Ministry of Health and Wellness and the Chairman of the
                 National Resuscitation Council of Jamaica. His accomplishments
                 have led him to sit on several boards. He is currently a board
                 member and the Director of Emergency Cardiac Care at the Heart
                 Foundation of Jamaica.
                 <br />
+                <br />
                 Dr. Wong is a dedicated and accomplished Physician Administrator
                 with a proven track record of seamlessly integrating medical
                 expertise with effective administrative leadership. Known for
                 driving operational excellence, optimizing healthcare delivery,
-                and fostering collaborative environments, he has used his skills
+                and fostering collaborative environments. He has used his skills
                 in overseeing medical staff, implementing strategic initiatives,
                 and ensuring regulatory compliance.
                 <br />
                 Dr. Wong enjoys cycling, travelling, reading and doing DIY
-                projects at home. His life mantra is to make a positive impact
+                projects at home. His life&apos;s mantra is to make a positive impact
                 on the lives of the persons that he comes in contact with.
               </div>
             </div>
