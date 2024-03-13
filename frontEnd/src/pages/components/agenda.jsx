@@ -50,15 +50,15 @@ const Agenda = () => {
       {show1 ? (
         <div className="agenda-expandable-content" id="agenda-content-1">
           <div className="agenda-expandable-content-text">
-            <span className="agenda-time"> 9: 00 a.m. - 10:00 p.m </span>
+            <span className="agenda-time"> 9: 30 a.m. - 10:00 a.m </span>
             <span className="agenda-event"> Registration Secretariat </span>
             <hr className="agenda-expandable-content-hr" />
-            <span className="agenda-time"> 10:00 a.m. - 10:10 a.m. </span>
+            <span className="agenda-time"> 10:00 a.m. - 10:05 a.m. </span>
             <span className="agenda-event"> Prayer </span>
             Dr. Samantha Nicholson Spence <br />
             Senior Medical Officer, Kingston Public Hospital
             <hr className="agenda-expandable-content-hr" />
-            <span className="agenda-time"> 10:10 am – 10:20 am </span>
+            <span className="agenda-time"> 10:05 am – 10:20 am </span>
             <span className="agenda-event">Welcome/Recap of the Past Year</span>
             Mr. Errol Greene, Regional Director
             <br />
@@ -67,12 +67,12 @@ const Agenda = () => {
             <span className="agenda-event"> Purpose Statement </span>
             Mr. Wentworth Charles, Board Chairman
             <hr className="agenda-expandable-content-hr" />
-            <span className="agenda-time"> 10:40 am - 11:05 am </span>
+            {/* <span className="agenda-time"> 10:40 am - 11:30 am </span>
             <span className="agenda-event"> Remarks </span>
             Mr. Dunstan Bryan, Permanent Secretary, Ministry of Health &
             Wellness
-            <hr className="agenda-expandable-content-hr" />
-            <span className="agenda-time"> 11:05 am - 11:35 am </span>
+            <hr className="agenda-expandable-content-hr" /> */}
+            <span className="agenda-time"> 10:40 am - 11:30 am </span>
             <span className="agenda-event">
               Charge of the Board of Directors
             </span>
@@ -80,7 +80,7 @@ const Agenda = () => {
             <br />
             Minister of Health and Wellness <br />
             <hr className="agenda-expandable-content-hr" />
-            <span className="agenda-time"> 11:35 am - 12:15 am </span>
+            <span className="agenda-time"> 11:30 am - 12:15 am </span>
             <span className="agenda-event">
               Update from the Implementation Committee
             </span>
@@ -99,13 +99,12 @@ const Agenda = () => {
             <hr className="agenda-expandable-content-hr" />
             <span className="agenda-time"> 1:30 pm - 2:00 pm </span>
             <span className="agenda-event">
-              Presentation: Technical Presentation: Identifying and Addressing
-              Gaps in Healthcare Delivery to Ensure Patients Receive the Right
-              Care at the Right Time across the Region
+              Presentation: Integrated Healthcare Management Platforms &
+              Software: Enabling Coordinated Care and Efficient Operations
             </span>
-            Dr. Sandra Chambers, Regional Technical Director
+            Mr. Tywayne Buchanan
             <br />
-            Nurse Marcia Thomas-Yetman, Regional Nursing Supervisor
+            Senior Software Engineer
             <br />
             <hr className="agenda-expandable-content-hr" />
             <span className="agenda-time"> 2:00 pm - 2:15 pm </span>
@@ -114,16 +113,17 @@ const Agenda = () => {
             <hr className="agenda-expandable-content-hr" />
             <span className="agenda-time"> 2:15 pm - 3:15 pm </span>
             <span className="agenda-event">
-              St. Joseph’s Hospital & KPH/VJH Strategic Focus for 2024/2025
+              KPH/VJH & St. Joseph’s Hospital Strategic Focus for 2024/2025
             </span>
-            Dr. Christopher Munroe, Chief Executive Officer, St. Joseph’s
-            Hospital (Acting) <br />
             Dr. Natalie Whylie, Chief Executive Officer, KPH/VJH (Acting)
             <br />
             Dr. Samantha Nicholson Spence, Senior Medical Officer, KPH (Acting){" "}
             <br />
             Dr. Garth McDonald, Senior Medical Officer, Victoria Jubilee
             Hospital
+            <br />
+            Dr. Christopher Munroe, Chief Executive Officer, St. Joseph’s
+            Hospital (Acting)
             <hr className="agenda-expandable-content-hr" />
             <span className="agenda-time"> 3:15 pm - 3:30 pm </span>
             <span className="agenda-event"> Discussion and Comments </span>
@@ -152,7 +152,7 @@ const Agenda = () => {
             <span className="agenda-event"> Vote of Thanks </span>
             Mr. Maurice Matthews, Senior Project Manager
             <hr className="agenda-expandable-content-hr" />
-            <span className="agenda-time"> 4:50 pm – 7:00 pm </span>
+            {/* <span className="agenda-time"> 4:50 pm – 7:00 pm </span>
             <span className="agenda-event"> BREAK </span>
             <hr className="agenda-expandable-content-hr" />
             <span className="agenda-time"> 7:00 pm – 9:00 pm </span>
@@ -169,8 +169,8 @@ const Agenda = () => {
             <hr className="agenda-expandable-content-hr" />
             <span className="agenda-time"> 7:15 pm -9:00 pm </span>
             <span className="agenda-event"> Dinner with the Chairman </span>
-            <hr className="agenda-expandable-content-hr" />
-            <span className="agenda-time">9:00pm</span>
+            <hr className="agenda-expandable-content-hr" /> */}
+            <span className="agenda-time">4:50 p.m</span>
             <span className="agenda-event"> End of Day One </span>
           </div>
         </div>
